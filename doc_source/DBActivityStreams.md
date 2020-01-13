@@ -720,7 +720,7 @@ def decrypt_payload(payload, data_key):
 
 def decrypt_decompress(payload, key):
     decrypted = decrypt_payload(payload, key)
-    return zlib.decompress(decrypted, zlib.MAX_WBITS + 1)
+    return zlib.decompress(decrypted, zlib.MAX_WBITS + 16)
 
 
 def main():
